@@ -1,50 +1,48 @@
+import Footer from "@/components/footer/page";
+import Header from "@/components/header/page";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="h-screen p-5">
-      <header className="flex justify-end space-x-2 mr-[5vw]">
-        <button>PT</button>
-        <button>Light</button>
-      </header>
+    <main className="">
+      <Header />
 
-      <div className="p-[20vw] flex h-[85vh] justify-between items-center my-auto">
-        <div className="block space-y-3">
-          <Image
-            src="/DSC08867.jpg"
-            width={250}
-            height={250}
-            quality={80}
-            priority={true}
-            alt="Picture of Bruno Maruyama"
-            style={{ objectFit: "contain" }}
-            className="rounded-full w-auto h-auto"
-          />
+      <div className="">
+        <div className="sm:p-[10vw] lg:p-[20vw] p-4 sm:flex block h-[85vh] justify-between items-center my-auto">
+          <div className="block space-y-3">
+            <Image
+              src="/DSC08867.jpg"
+              width={200}
+              height={200}
+              quality={80}
+              priority={true}
+              alt="Picture of Bruno Maruyama"
+              style={{ objectFit: "contain" }}
+              className="rounded-full w-45 h-45"
+            />
 
-          <h1 className="text-6xl leading-8">
-            Bruno <br />
-            Maruyama
-          </h1>
-          <h2 className="text-2xl">Front-End Developer</h2>
+            <h1 className="text-6xl leading-8">
+              Bruno <br />
+              Maruyama
+            </h1>
+            <h2 className="text-2xl">Front-End Developer</h2>
+          </div>
+
+          <ul className="block text-4xl sm:text-right text-left mt-6">
+            <li className="hover:text-blue-100 duration-500 hover:translate-x-2">
+              <a href="http://">Sobre mim</a>
+            </li>
+            <li className="hover:text-blue-100 duration-500 hover:translate-x-2">
+              <a href="http://">Projetos</a>
+            </li>
+            <li className="hover:text-blue-100 duration-500 hover:translate-x-2">
+              <a href="http://">Contato</a>
+            </li>
+          </ul>
         </div>
-
-        <ul className="block text-4xl text-right">
-          <li className="hover:text-5xl hover:text-blue-100 duration-500">
-            <a href="http://">Sobre mim</a>
-          </li>
-          <li className="hover:text-5xl hover:text-blue-100 duration-500">
-            <a href="http://">Projetos</a>
-          </li>
-          <li className="hover:text-5xl hover:text-blue-100 duration-500">
-            <a href="http://">Contato</a>
-          </li>
-        </ul>
       </div>
 
-      <footer className="flex space-x-2 ml-[5vw]">
-        <a href="">github</a>
-        <a href="">linkedin</a>
-      </footer>
+      <Footer />
     </main>
   );
 }
