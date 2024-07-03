@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Rozha_One } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 
-const rozha = Rozha_One({
+const inter = Inter_Tight({
   subsets: ["latin"],
   display: "swap",
-  weight: "400",
+  weight: ["400", "100", "200", "300", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={rozha.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

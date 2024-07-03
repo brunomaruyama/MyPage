@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="flex justify-end space-x-2 mr-[5vw] mt-4">
+    <header className="flex sm:pr-[5vw] lg:pr-[10vw] items-center space-x-2 justify-end p-3 bg-slate-900">
       <button>PT</button>
       <svg
         xmlns="http://www.w3.org/2000/svg"
