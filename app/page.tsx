@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="h-full grid">
+    <main className="h-[100vh] grid">
       <Header />
 
       <div className="row-span-9 sm:px-[5vw] lg:px-[10vw] my-[auto]">
@@ -24,7 +24,7 @@ export default function Home() {
             <br />
             MARUYAMA
           </h1>
-          <h2 className="text-2xl font-extralight leading-none">
+          <h2 className="text-2xl font-light leading-none">
             Front-End Developer
           </h2>
         </div>

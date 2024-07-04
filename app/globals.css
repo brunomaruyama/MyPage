@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: #fff;
-  background: linear-gradient(-45deg, #000000, #021c27, #000000);
-  background-size: 400% 400%;
+.light {
+  color: #333;
+  background: linear-gradient(-45deg, #fff, #dfcedd, #b2ccd7, #f8c9d9, #fff);
+  background-size: 300% 300%;
   animation: lateralflow 15s ease infinite;
   height: 100vh;
+  transition-duration: 1000;
+  transition-timing-function: cubic-belzier(0.4, 0, 0.2, 1;);
+}
+
+.dark {
+  color: #e9e9e9;
+  background: linear-gradient(-45deg, #000, #1f0e1d, #020c27, #380919, #000);
+  background-size: 300% 300%;
+  animation: lateralflow 15s ease infinite;
+  height: 100vh;
+  transition-duration: 1000;
+  transition-timing-function: cubic-belzier(0.4, 0, 0.2, 1;);
 }
 
 @keyframes lateralflow {

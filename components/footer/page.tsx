@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="flex items-center bg-slate-900 space-x-2 py-3 sm:pl-[5vw] lg:pl-[10vw]">
+    <footer className="flex items-center space-x-2 py-3 sm:pl-[5vw] lg:pl-[10vw]">
       <a href="https://github.com/brunomaruyama" target="_blank">
         <svg
-          className="h-5 w-5 text-white"
+          className="h-5 w-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -17,7 +17,7 @@ export default function Footer() {
       </a>
       <a href="https://www.linkedin.com/in/bruno-maruyama/" target="_blank">
         <svg
-          className="h-5 w-5 text-neutral-100"
+          className="h-5 w-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
