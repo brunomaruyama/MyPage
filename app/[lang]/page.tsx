@@ -15,7 +15,6 @@ export default async function Home({
     <>
       <main className="h-[100vh] grid">
         <Header />
-
         <div className="row-span-9 sm:px-[5vw] lg:px-[10vw] my-[auto]">
           <div className="block space-y-3 ">
             <Image
@@ -26,7 +25,7 @@ export default async function Home({
               priority={true}
               alt="Picture of Bruno Maruyama"
               style={{ objectFit: "contain" }}
-              className="rounded-full w-15 h-15"
+              className="rounded-full w-auto h-auto"
             />
             <h1 className="text-7xl leading-none font-black">
               BRUNO
