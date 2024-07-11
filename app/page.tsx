@@ -1,16 +1,8 @@
-import Footer from "./components/footer/page";
-import Header from "./components/header/page";
+import Footer from "../components/footer/page";
+import Header from "../components/header/page";
 import Image from "next/image";
-import { getDictionary } from "../../get-dictionary";
-import { Locale } from "../../i18n-config";
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  const dict = await getDictionary(lang);
-
+export default function Home() {
   return (
     <>
       <main className="h-[100vh] grid">
@@ -33,7 +25,7 @@ export default async function Home({
               MARUYAMA
             </h1>
             <h2 className="text-2xl font-light leading-none">
-              {dict.subtitle}
+              Desenvolvedor Front-End
             </h2>
           </div>
           <ul className="text-4xl sm:text-right text-left pt-6 font-bold">
