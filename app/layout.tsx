@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
+import Header from "../components/header/page";
+import Footer from "../components/footer/page";
 
 const inter = Inter_Tight({
   subsets: ["latin"],
@@ -20,7 +22,13 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="h-[100dvh]">
+          <Header />
+          {children}
+          <Footer />
+        </main>
+      </body>
     </html>
   );
 }
