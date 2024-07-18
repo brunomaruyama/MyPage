@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [lightMode, setLightMode] = useState(false);
@@ -53,16 +56,40 @@ export default function Header() {
     }
   }, [lightMode]);
 
+  const pathname = usePathname();
+
   return (
-    <header className="absolute top-0 w-full flex sm:pr-[5vw] lg:pr-[10vw] items-center space-x-2 justify-end p-3">
-      {/* <button>PT</button> */}
-      <button
-        onClick={() => {
-          setLightMode(!lightMode);
-        }}
+    <header className="h-16 absolute top-0 w-full flex items-center space-x-2 justify-between p-3 sm:px-[5vw] lg:px-[10vw]">
+      <div
+        className={
+          pathname === "/" ? "invisible" : "flex items-center space-x-2"
+        }
       >
-        {whichIcon(lightMode)}
-      </button>
+        <Image
+          src="/DSC08868.jpg"
+          width={20}
+          height={20}
+          quality={80}
+          priority={true}
+          alt="Picture of Bruno Maruyama"
+          style={{ objectFit: "contain" }}
+          className="rounded-full w-auto h-auto"
+        />
+        <Link href="/" className="font-extrabold hover:text-orange-300 ">
+          Bruno Maruyama
+        </Link>
+      </div>
+
+      <div>
+        {/* <button>PT</button> */}
+        <button
+          onClick={() => {
+            setLightMode(!lightMode);
+          }}
+        >
+          {whichIcon(lightMode)}
+        </button>
+      </div>
     </header>
   );
 }

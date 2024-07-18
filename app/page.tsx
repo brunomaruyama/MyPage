@@ -1,6 +1,3 @@
-import Link from "next/link";
-import Footer from "../components/footer/page";
-import Header from "../components/header/page";
 import Image from "next/image";
 import Links from "../components/Links/page";
 
@@ -10,7 +7,7 @@ export default function Home() {
       <div className="h-[100vh] w-full flex flex-wrap justify-between items-center  sm:items-center sm:px-[5vw] lg:px-[10vw] my-[auto] px-3 py-8">
         <div className="block space-y-3 ">
           <Image
-            src="/DSC08867.jpg"
+            src="/DSC08868.jpg"
             width={75}
             height={75}
             quality={80}
