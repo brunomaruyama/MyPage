@@ -14,7 +14,7 @@ export default function Home() {
             priority={true}
             alt="Picture of Bruno Maruyama"
             style={{ objectFit: "contain" }}
-            className="rounded-full w-auto h-auto"
+            className="rounded-sm border border-white w-auto h-auto"
           />
           <h1 className="text-7xl leading-none font-black">
             BRUNO
