@@ -1,11 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import Links from "../../components/Links/page";
-
 export default function About() {
   return (
-    <div className="h-[100vh] flex justify-between space-x-10 items-center sm:px-[5vw] lg:px-[10vw] my-[auto] px-3 py-8">
-      <div className="w-1/2">
+    <div className="h-[100vh] flex flex-col sm:flex-row sm:basis-auto justify-around sm:space-x-10 items-center sm:px-[5vw] lg:px-[10vw] my-[auto] px-3">
+      <div className="box-border w-1/2">
         <h1 className="text-4xl font-bold py-2">About me</h1>
         <p className="font-medium">
           Graduated in Biological Sciences from the University of São Paulo
@@ -14,8 +12,9 @@ export default function About() {
           Javascript, ReactJS, Git, GitHub). At the moment I'm finishing a
           Specialization Course in Data Science & Analytics.
         </p>
-
-        <h2 className="text-3xl font-bold py-2 mt-8">
+      </div>
+      <div className="box-border w-1/2">
+        <h2 className="text-3xl font-bold py-2">
           Technologies I've been using in my projects
         </h2>
         <div className="flex flex-wrap justify-around space-x-2 space-y-2 items-center">
@@ -216,7 +215,6 @@ export default function About() {
           </svg>
         </div>
       </div>
-      <Links />
     </div>
   );
 }

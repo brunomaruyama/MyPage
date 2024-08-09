@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Links from "../components/Links/page";
+import About from "./about/page";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
     <>
-      <div className="h-[100vh] w-full flex flex-wrap justify-between items-center  sm:items-center sm:px-[5vw] lg:px-[10vw] my-[auto] px-3 py-8">
+      <section
+        id="home"
+        className="h-[100vh] w-full flex flex-wrap justify-between items-center  sm:items-center sm:px-[5vw] lg:px-[10vw] my-[auto] px-3 py-8"
+      >
         <div className="block space-y-3 ">
           <Image
             src="/DSC08868.jpg"
@@ -25,9 +30,13 @@ export default function Home() {
             Front-End Developer
           </h2>
         </div>
-
-        <Links />
-      </div>
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="contact" className="h-[100vh]">
+        <Contact />
+      </section>
     </>
   );
 }

@@ -23,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html>
       <body className={inter.className}>
-        <main className="h-[100vh]">
+        <main>
           <Header />
           {children}
           <Footer />

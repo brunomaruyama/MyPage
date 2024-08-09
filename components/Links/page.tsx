@@ -7,30 +7,30 @@ export default function Links() {
   const pathname = usePathname();
 
   return (
-    <ul className="text-4xl sm:text-right text-left sm:pt-6 font-bold flex-col">
-      <li className="hover:text-orange-300  duration-500 hover:translate-x-2">
+    <ul className="text-xl font-bold flex justify-center items-center space-x-4">
+      <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
         <Link
-          data-active={pathname === "/about" ? "true" : "false"}
+          data-active={pathname === "#about" ? "true" : "false"}
           className="data-[active=true]:text-purple-400"
-          href="/about"
+          href="#about"
         >
           About
         </Link>
       </li>
-      <li className="hover:text-orange-300 duration-500 hover:translate-x-2">
+      <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
         <Link
-          data-active={pathname === "/projects" ? "true" : "false"}
+          data-active={pathname === "#projects" ? "true" : "false"}
           className="data-[active=true]:text-purple-400"
-          href="/projects"
+          href="#projects"
         >
           Projects
         </Link>
       </li>
-      <li className="hover:text-orange-300 duration-500 hover:translate-x-2">
+      <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
         <Link
-          data-active={pathname === "/contact" ? "true" : "false"}
+          data-active={pathname === "#contact" ? "true" : "false"}
           className="data-[active=true]:text-purple-400"
-          href="/contact"
+          href="#contact"
         >
           Contact
         </Link>
