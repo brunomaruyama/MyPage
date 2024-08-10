@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Links from "../components/Links/page";
-import About from "./about/page";
-import Contact from "./contact/page";
+import About from "../components/about/page";
+import Contact from "../components/contact/page";
+import Projects from "../components/projects/page";
 
 export default function Home() {
   return (
@@ -33,6 +33,9 @@ export default function Home() {
       </section>
       <section id="about">
         <About />
+      </section>
+      <section id="projects">
+        <Projects />
       </section>
       <section id="contact" className="h-[100vh]">
         <Contact />
