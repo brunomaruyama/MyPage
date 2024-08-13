@@ -28,9 +28,13 @@ const Contact = () => {
   }
 
   return (
-    <div className="flex h-full w-full justify-center items-center">
+    <div className="h-full w-full mx-auto flex-col justify-center mt-[10vh]">
+      <h2 className="fromLeft text-center text-3xl font-bold">
+        Send me a Message
+      </h2>
+      <p className="fromLeft text-center">Let´s work together!</p>
       <form
-        className="p-8 flex flex-col mx-auto items-start"
+        className="fromLeft p-8 flex flex-col mx-auto items-center"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-6 flex flex-col">
@@ -42,6 +46,7 @@ const Contact = () => {
             type="text"
             placeholder="Full Name"
             {...register("name", { required: true })}
+            autoComplete="name"
           />
         </div>
         <div className="mb-6 flex flex-col">
@@ -53,6 +58,7 @@ const Contact = () => {
             type="email"
             placeholder="example@example.com"
             {...register("email", { required: true })}
+            autoComplete="on"
           />
         </div>
         <div className="mb-6 flex flex-col">

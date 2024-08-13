@@ -31,6 +31,21 @@ body {
   transition-timing-function: cubic-belzier(0.4, 0, 0.2, 1;);
 }
 
+.fromLeft {
+  animation: lateralshow;
+  animation-timeline: view(55% 0%);
+}
+
+.fromRight {
+  animation: lateralshowright;
+  animation-timeline: view(55% 0%);
+}
+
+.fromBottom {
+  animation: bottomshow;
+  animation-timeline: view(55% 0%);
+}
+
 @keyframes lateralflow {
   0% {
     background-position: 0% 50%;
@@ -40,6 +55,39 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes lateralshow {
+  from {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes lateralshowright {
+  from {
+    opacity: 0;
+    transform: translateX(200px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes bottomshow {
+  from {
+    opacity: 0;
+    transform: translatey(200px) scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
 

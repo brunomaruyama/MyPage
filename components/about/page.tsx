@@ -2,22 +2,25 @@
 
 export default function About() {
   return (
-    <div className="h-[100vh] flex flex-col sm:flex-row sm:basis-auto justify-around sm:space-x-10 items-center sm:px-[5vw] lg:px-[10vw] my-[auto] px-3">
-      <div className="box-border w-1/2">
+    <div className="h-[100vh] flex flex-col sm:flex-row sm:basis-auto justify-around sm:space-x-10 items-center sm:px-[5vw] lg:px-[10vw] mt-[20vh] sm:mt-0 px-3">
+      <div className="fromLeft box-border sm:w-1/2">
         <h1 className="text-4xl font-bold py-2">About me</h1>
-        <p className="font-medium">
+        <p className="font-normal">
           Graduated in Biological Sciences from the University of São Paulo
           (bachelor's and licentiate's degree). I'm currently looking to migrate
-          my career to front-end development (NextJS, TailwindCSS, HTML, CSS,
-          Javascript, ReactJS, Git, GitHub). At the moment I'm finishing a
-          Specialization Course in Data Science & Analytics.
+          my career to front-end development{" "}
+          <b>
+            (NextJS, TailwindCSS, HTML, CSS, Javascript, ReactJS, Git, GitHub)
+          </b>
+          . At the moment I'm finishing a Specialization Course in Data Science
+          & Analytics.
         </p>
       </div>
-      <div className="box-border w-1/2">
+      <div className="fromRight box-border sm:w-1/2">
         <h2 className="text-3xl font-bold py-2">
           Technologies I've been using in my projects
         </h2>
-        <div className="flex flex-wrap justify-around space-x-2 space-y-2 items-center">
+        <div className="grid grid-cols-4 gap-4 items-center">
           <svg
             fill="currentColor"
             width="40"
