@@ -12,7 +12,7 @@ export default function Links() {
         <Link
           data-active={pathname === "#about" ? "true" : "false"}
           className="data-[active=true]:text-purple-400"
-          href="#about"
+          href="/#about"
         >
           About
         </Link>
@@ -21,7 +21,7 @@ export default function Links() {
         <Link
           data-active={pathname === "#projects" ? "true" : "false"}
           className="data-[active=true]:text-purple-400"
-          href="#projects"
+          href="/#projects"
         >
           Projects
         </Link>
@@ -30,7 +30,7 @@ export default function Links() {
         <Link
           data-active={pathname === "#contact" ? "true" : "false"}
           className="data-[active=true]:text-purple-400"
-          href="#contact"
+          href="/#contact"
         >
           Contact
         </Link>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { projetos } from "../projetos/page";
+import { projetos } from "../../app/projetos";
 
 export default function Projects() {
   return (
@@ -12,9 +12,9 @@ export default function Projects() {
             className={`mx-auto flex-col justify-center max-w-sm  rounded-md items-center bg-purple-300/40 hover:bg-purple-500/50 duration-300 overflow-hidden group opacity-75 hover:opacity-100`}
             key={projeto.slug}
           >
-            <Link href={projeto.slug}>
+            <Link href={`projects/${projeto.slug}`}>
               <Image
-                src={projeto.imageRef}
+                src={projeto.imageRef[0]}
                 alt={`screenshot of ${projeto.project}`}
                 width={400}
                 height={220}

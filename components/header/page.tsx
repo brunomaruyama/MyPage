@@ -58,7 +58,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="h-[7vh] fixed backdrop-blur-md bottom-0 sm:top-0 w-full flex items-center space-x-2 justify-between p-3 sm:px-[5vw] lg:px-[10vw]">
+    <header className="h-[7vh] fixed backdrop-blur-md top-0 w-full flex items-center space-x-2 justify-between p-3 sm:px-[5vw] lg:px-[10vw]">
       <div>
         <Links />
       </div>
