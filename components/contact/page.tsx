@@ -28,7 +28,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-full w-full mx-auto flex-col justify-center mt-[10vh]">
+    <div className="z-0 h-full w-full mx-auto flex-col justify-center mt-[10vh]">
       <h2 className="fromLeft text-center text-3xl font-bold">
         Send me a Message
       </h2>
