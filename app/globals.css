@@ -33,19 +33,19 @@ body {
 
 .fromLeft {
   animation: lateralshow;
-  animation-timeline: view(65% 0%);
+  animation-timeline: view(75% 0%);
   z-index: -10;
 }
 
 .fromRight {
   animation: lateralshowright;
-  animation-timeline: view(65% 0%);
+  animation-timeline: view(75% 0%);
   z-index: -10;
 }
 
 .fromBottom {
   animation: bottomshow;
-  animation-timeline: view(65% 0%);
+  animation-timeline: view(75% 0%);
   z-index: -20;
 }
 

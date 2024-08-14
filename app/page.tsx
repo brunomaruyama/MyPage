@@ -10,9 +10,9 @@ export default function Home() {
       <Header />
       <section
         id="home"
-        className="pt-[15vh] sm:h-[100vh] w-full flex flex-wrap justify-between items-center  sm:items-center sm:px-[5vw] lg:px-[10vw] my-[auto] px-3 sm:py-8"
+        className="pt-[15vh] sm:h-[100vh] w-full grid md:grid-cols-3 sm:px-[5vw] lg:px-[10vw] my-[auto] px-3"
       >
-        <div className="block sm:flex space-y-3 items-end">
+        <div className="col-span-2 block space-y-3 items-end mb-8">
           <Image
             src="/DSC08868.jpg"
             width={150}
@@ -21,7 +21,7 @@ export default function Home() {
             priority={true}
             alt="Picture of Bruno Maruyama"
             style={{ objectFit: "contain" }}
-            className="rounded-sm border border-white w-auto h-auto"
+            className="border border-purple-500 w-auto h-auto"
           />
           <div className="block">
             <h1 className="text-4xl sm:text-7xl leading-none font-black">
@@ -32,6 +32,30 @@ export default function Home() {
             <h2 className="text-2xl font-light leading-none">
               Front-End Developer
             </h2>
+          </div>
+        </div>
+        <div className="col-span-1">
+          <div className="mb-4">
+            <h2 className="text-2xl font-bold">Education</h2>
+            <p className="font-light">
+              - Bachelor´s and Licentiate Degree in
+              <span className="font-semibold"> Biological Sciences</span> -
+              Universidade de São Paulo
+            </p>
+            <p className="font-light">
+              - MBA Specialization Degree in
+              <span className="font-semibold"> Data Science and Analytics</span>
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold">Languages</h2>
+            <p className="font-light">
+              - <span className="font-semibold">Brazilian portuguese</span>:
+              native speaker
+            </p>
+            <p className="font-light">
+              - <span className="font-semibold">English</span>: advanced
+            </p>
           </div>
         </div>
       </section>

@@ -6,14 +6,17 @@ export default function About() {
       <div className="fromLeft box-border sm:w-1/2">
         <h1 className="text-4xl font-bold py-2">About me</h1>
         <p className="font-normal">
-          Graduated in Biological Sciences from the University of São Paulo
-          (bachelor's and licentiate's degree). I'm currently looking to migrate
-          my career to front-end development{" "}
+          Hi! I´m Bruno! <br />
+          I Graduated in Biological Sciences from the University of São Paulo
+          (bachelor's and licentiate's degree) and recently finished a
+          Specialization course in Data Science and Analytics.
+          <br />
+          I'm currently looking forward to migrate my career to front-end
+          development{" "}
           <b>
             (NextJS, TailwindCSS, HTML, CSS, Javascript, ReactJS, Git, GitHub)
           </b>
-          . At the moment I'm finishing a Specialization Course in Data Science
-          & Analytics.
+          .
         </p>
       </div>
       <div className="fromRight box-border sm:w-1/2">
