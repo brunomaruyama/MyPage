@@ -21,10 +21,10 @@ export default function Home() {
             priority={true}
             alt="Picture of Bruno Maruyama"
             style={{ objectFit: "contain" }}
-            className="border border-purple-800 w-auto h-auto"
+            className="hover:shadow-purple-400/50 shadow-black/30 duration-500 shadow-2xl rounded-full w-auto h-auto"
           />
           <div className="block">
-            <h1 className="text-4xl sm:text-7xl leading-none font-black">
+            <h1 className="text-4xl sm:text-7xl leading-none font-black title">
               BRUNO
               <br />
               MARUYAMA
