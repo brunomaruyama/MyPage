@@ -22,7 +22,14 @@ body {
 
 .dark {
   color: #e9e9e9;
-  background: linear-gradient(-45deg, #000, #10000f, #040e19, #10000f, #000);
+  background: linear-gradient(
+    -45deg,
+    #090909,
+    #10000f,
+    #040e19,
+    #10000f,
+    #090909
+  );
   background-size: 800% 800%;
   animation: lateralflow 7s ease infinite;
   height: 100vh;
