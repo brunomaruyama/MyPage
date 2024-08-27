@@ -1,10 +1,10 @@
 export default function Techs() {
   return (
     <div className="w-4/5 h-full mb-[16vh] mx-auto">
-      <h2 className="fromRight text-3xl font-bold py-2 mb-10">
+      <h2 className="fromRight text-center text-3xl font-bold py-2 mb-10">
         Technologies I`ve been using in my projects
       </h2>
-      <div className="fromRight grid grid-cols-6 gap-10 items-center">
+      <div className="fromRight grid grid-cols-6 gap-10 place-items-center">
         <svg
           fill="currentColor"
           width="40"

@@ -1,13 +1,9 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import ThemeButton from "../themebutton/page";
 
 export default function Links() {
-  const pathname = usePathname();
-
   return (
-    <ul className="text-xl font-normal tracking-widest flex justify-center items-center space-x-10">
+    <ul className="hidden sm:flex  text-xl font-normal tracking-widest justify-center items-center space-x-10">
       <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
         <Link href="#about">About</Link>
       </li>
@@ -19,6 +15,9 @@ export default function Links() {
       </li>
       <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
         <Link href="#contact">Contact</Link>
+      </li>
+      <li className="translate-y-1">
+        <ThemeButton />
       </li>
     </ul>
   );

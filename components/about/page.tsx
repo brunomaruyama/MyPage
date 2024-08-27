@@ -5,7 +5,7 @@ export default function About() {
     <div className="h-full items-start grid sm:grid-cols-5 gap-8 sm:px-[5vw] lg:px-[10vw] my-[20vh] px-3">
       <div className="col-span-3">
         <h1 className="text-4xl font-bold py-2 mb-8">About me</h1>
-        <p className="font-normal">
+        <p className="font-normal leading-relaxed">
           Hi! I´m Bruno! <br />
           I Graduated in Biological Sciences from the University of São Paulo
           (bachelor's and licentiate's degree) and recently finished a

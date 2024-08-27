@@ -42,7 +42,7 @@ const Contact = () => {
             Full Name
           </label>
           <input
-            className="bg-gray-500/20 rounded border border-gray-500 border-opacity-80 p-1 focus:outline-none focus:border-purple-500 backdrop-blur-sm"
+            className="w-[60vw] sm:w-3/4 md:w-1/2 lg:w-2/5 min-w-60 bg-gray-500/20 rounded border border-gray-500 border-opacity-80 p-1 focus:outline-none focus:border-purple-500 backdrop-blur-sm"
             type="text"
             placeholder="Full Name"
             {...register("name", { required: true })}
@@ -54,7 +54,7 @@ const Contact = () => {
             E-mail Address
           </label>
           <input
-            className="bg-gray-500/20 rounded border border-gray-500 border-opacity-80 p-1 focus:outline-none focus:border-purple-500 backdrop-blur-sm"
+            className="w-[60vw] sm:w-3/4 md:w-1/2 lg:w-2/5 min-w-60 bg-gray-500/20 rounded border border-gray-500 border-opacity-80 p-1 focus:outline-none focus:border-purple-500 backdrop-blur-sm"
             type="email"
             placeholder="example@example.com"
             {...register("email", { required: true })}
@@ -66,7 +66,7 @@ const Contact = () => {
             Message
           </label>
           <textarea
-            className="bg-gray-500/20 rounded border border-gray-500 border-opacity-80 p-1 focus:outline-none focus:border-purple-500 backdrop-blur-sm"
+            className="w-[60vw] sm:w-3/4 md:w-1/2 lg:w-2/5 min-w-60 bg-gray-500/20 rounded border border-gray-500 border-opacity-80 p-1 focus:outline-none focus:border-purple-500 backdrop-blur-sm"
             placeholder="Type your message"
             rows={8}
             {...register("message", { required: true })}
@@ -77,7 +77,7 @@ const Contact = () => {
             className="py-2 px-12 flex w-fit bg-purple-500 hover:bg-purple-600 hover:shadow-2xl hover:shadow-purple-400 duration-300 tracking-wider text-white rounded mt-5"
             role="submit"
           >
-            {isSubmitting ? "Submitting" : "Submit"}
+            {isSubmitting ? "Sending" : "Send"}
           </button>
           {succesMessage && <p>{succesMessage}</p>}
         </div>

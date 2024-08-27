@@ -13,7 +13,7 @@ export default function Home() {
         id="home"
         className=" pt-[8vh] mt-[7vh] sm:pt-[15vh] sm:h-full w-full sm:px-[5vw] lg:px-[10vw] my-[auto] px-3"
       >
-        <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 justify-between items-center my-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-5 sm:gap-8 justify-between items-center my-auto">
           <div className="space-y-3 col-span-3 ">
             <p className="text-xl">Hi, I`m</p>
             <h1 className="text-3xl sm:text-6xl font-black title">
@@ -22,12 +22,12 @@ export default function Home() {
             <h2 className="text-2xl font-light">Front-End Developer</h2>
             <a
               href="#contact"
-              className="py-2 px-12 flex w-fit bg-purple-500 hover:bg-purple-600 hover:shadow-2xl hover:shadow-purple-400 duration-300 tracking-wider text-white rounded mt-5"
+              className="py-2 px-12 flex w-fit shadow-[0_0_50px_rgb(147,51,234,0.8)] bg-purple-500 hover:bg-purple-600 hover:translate-x-2 duration-300 tracking-wider text-white rounded mt-5"
             >
               <p>Hire me</p>{" "}
             </a>
           </div>
-          <div className="col-span-2 row-start-1 sm:row-start-auto block mb-10 sm:mb-0">
+          <div className="w-full sm:col-span-2 row-start-1 sm:row-start-auto block mb-10 sm:mb-0">
             <Image
               src="/DSC08868.jpg"
               width={250}
@@ -36,7 +36,7 @@ export default function Home() {
               priority={true}
               alt="Picture of Bruno Maruyama"
               style={{ objectFit: "contain" }}
-              className="my-auto mx-auto ring-purple-600 ring-2  duration-500 rounded-full w-auto max-h-40 sm:max-h-80"
+              className="my-auto mx-auto shadow-[0_0_40px_rgb(147,51,234,0.7)]  duration-500 rounded-full w-auto max-h-40 sm:max-h-80"
             />
             <div className="flex justify-center space-x-3 mt-6">
               <a href="https://github.com/brunomaruyama" target="_blank">
