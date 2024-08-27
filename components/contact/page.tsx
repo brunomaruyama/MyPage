@@ -74,7 +74,7 @@ const Contact = () => {
         </div>
         <div>
           <button
-            className="px-5 py-2 duration-300 rounded-full bg-purple-500 text-white hover:bg-purple-700"
+            className="py-2 px-12 flex w-fit bg-purple-500 hover:bg-purple-600 hover:shadow-2xl hover:shadow-purple-400 duration-300 tracking-wider text-white rounded mt-5"
             role="submit"
           >
             {isSubmitting ? "Submitting" : "Submit"}

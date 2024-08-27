@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fixed backdrop-blur-sm w-full bottom-0 p-3 flex items-center space-x-2 py-3 sm:pl-[5vw] lg:pl-[10vw]">
+    <footer className="backdrop-blur-sm w-full bottom-0 p-3 flex justify-center items-center space-x-2">
       <a href="https://github.com/brunomaruyama" target="_blank">
         <svg
           className="h-5 w-5 hover:text-purple-400 hover:-translate-y-1 duration-500"
