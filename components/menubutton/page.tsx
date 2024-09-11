@@ -30,8 +30,8 @@ export default function MenuBtn() {
       </button>
       <ul
         className={`${
-          isOpen ? "block space-x-0 text-center" : "hidden"
-        } sm:flex  text-xl font-normal tracking-widest justify-center items-center sm:space-x-10`}
+          isOpen ? "block space-x-0 text-center down" : "hidden"
+        } duration-1000 transition-all sm:flex  text-xl font-normal tracking-widest justify-center items-center sm:space-x-10`}
       >
         <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
           <Link href="#about">About</Link>
