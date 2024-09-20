@@ -1,8 +1,12 @@
-export default function Techs() {
+interface TechsProps {
+  dict: any;
+}
+
+export default function Techs({ dict }: TechsProps) {
   return (
     <div className="w-4/5 h-full mb-[16vh] mx-auto">
       <h2 className="fromRight text-center text-3xl font-bold py-2 mb-10">
-        Technologies I`ve been using in my projects
+        {dict.tech.title}
       </h2>
       <div className="fromRight grid grid-cols-6 gap-10 place-items-center">
         <svg

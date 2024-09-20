@@ -3,7 +3,11 @@ import { useState } from "react";
 import Link from "next/link";
 import ThemeButton from "../themebutton/page";
 
-export default function MenuBtn() {
+interface MenuBtnProps {
+  dict: any;
+}
+
+export default function MenuBtn({ dict }: MenuBtnProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -34,16 +38,16 @@ export default function MenuBtn() {
         } duration-1000 transition-all sm:flex  text-xl font-normal tracking-widest justify-center items-center sm:space-x-10`}
       >
         <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
-          <Link href="#about">About</Link>
+          <Link href="#about">{dict.links.about}</Link>
         </li>
         <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
-          <Link href="#techs">Technologies</Link>
+          <Link href="#techs">{dict.links.tech}</Link>
         </li>
         <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
-          <Link href="#projects">Projects</Link>
+          <Link href="#projects">{dict.links.projects}</Link>
         </li>
         <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
-          <Link href="#contact">Contact</Link>
+          <Link href="#contact">{dict.links.contact}</Link>
         </li>
         <li className="translate-y-1">
           <ThemeButton />

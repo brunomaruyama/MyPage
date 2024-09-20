@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
-import Footer from "../components/footer/page";
-import { HomeButton } from "../components/homeButton/button";
+import Footer from "../../components/footer/page";
+import { HomeButton } from "../../components/homeButton/button";
 
 const inter = Inter_Tight({
   subsets: ["latin"],
