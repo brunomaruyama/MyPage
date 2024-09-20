@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { projetos } from "../../app/projetos";
+import { projetos } from "../../app/[lang]/projetos";
 
 interface ProjectsProps {
   dict: any;

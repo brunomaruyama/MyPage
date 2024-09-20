@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { projetos } from "../../../projetos";
+import { projetos } from "../../projetos";
 import Image from "next/image";
 import ThemeButton from "../../../../components/themebutton/page";
 import Link from "next/link";
