@@ -5,6 +5,7 @@ let headers = { "accept-language": "en" };
 let languages = new Negotiator({ headers }).languages();
 let locales = ["en", "pt"];
 let defaultLocale = "en";
+const PUBLIC_FILE = /\.(.*)$/;
 
 match(languages, locales, defaultLocale); // -> 'en'
 
@@ -43,6 +44,11 @@ export function middleware(request) {
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
+
+  //to take the files from the public folder
+  if (PUBLIC_FILE.test(request.nextUrl.pathname)) {
+    return;
+  }
 
   if (pathnameHasLocale) return;
 
