@@ -6,7 +6,7 @@
     "abouttitle": "About me",
     "about": "Hi! I'm Bruno!\n\nI have a degree in Biological Sciences from the University of São Paulo, where I obtained both my bachelor's and bachelor's degrees. I also completed an MBA specialization in Data Science & Analytics.\n\nI recently decided to transition my career to the area of front-end development, combining my passion for solving problems with technical skills in technologies such as HTML, CSS, JavaScript, TypeScript, ReactJS and NextJs. I also have experience using essential development tools such as Git, GitHub and SQL, and I constantly seek to improve my skills through projects and ongoing studies.\n\nMy motivation for this transition is the desire to combine the analytical thinking acquired in science with the creativity and innovation present in web development. I believe that my ability to analyze complex data and translate it into practical solutions will be a differential in the construction of functional and dynamic interfaces.",
     "education": {
-      "title": "education",
+      "title": "Education",
       "degrees": "• Bachelor´s and Licentiate Degree in Biological Sciences - Universidade de São Paulo\n\n• MBA Specialization Degree in Data Science and Analytics"
     },
     "languages": {
