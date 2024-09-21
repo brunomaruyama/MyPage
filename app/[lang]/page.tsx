@@ -17,7 +17,7 @@ export default async function Home({ params: { lang } }: { params: Params }) {
       <Header dict={dict} />
       <section
         id="home"
-        className=" pt-[8vh] mt-[7vh] sm:pt-[15vh] sm:h-full w-full sm:px-[5vw] lg:px-[10vw] my-[auto] px-3"
+        className="mt-4 sm:mt-[7vh] sm:pt-[15vh] sm:h-full w-full sm:px-[5vw] lg:px-[10vw] my-[auto] px-3"
       >
         <div className="grid grid-cols-1 sm:grid-cols-5 sm:gap-8 justify-between items-center my-auto">
           <div className="space-y-3 flex-col mx-auto sm:mx-0 text-center sm:text-left sm:col-span-3 ">

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import ThemeButton from "../themebutton/page";
+import { LangSwitcher } from "../langswitcher/langswitcher";
 
 interface MenuBtnProps {
   dict: any;
@@ -34,8 +35,10 @@ export default function MenuBtn({ dict }: MenuBtnProps) {
       </button>
       <ul
         className={`${
-          isOpen ? "block space-x-0 text-center down" : "hidden"
-        } duration-1000 transition-all sm:flex  text-xl font-normal tracking-widest justify-center items-center sm:space-x-10`}
+          isOpen
+            ? "translate-y-0 scale-y-100 opacity-100 block"
+            : "-translate-y-1/2 scale-y-0 opacity-0 h-0"
+        } sm:translate-y-0 sm:scale-y-100 sm:opacity-100 duration-1000 transition-all  sm:flex w-full text-xl font-normal tracking-widest justify-center items-center sm:space-x-10 space-x-0 text-center`}
       >
         <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
           <Link href="#about">{dict.links.about}</Link>
@@ -51,6 +54,9 @@ export default function MenuBtn({ dict }: MenuBtnProps) {
         </li>
         <li className="translate-y-1">
           <ThemeButton />
+        </li>
+        <li className="translate-y-1">
+          <LangSwitcher />
         </li>
       </ul>{" "}
     </div>
