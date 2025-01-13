@@ -4,11 +4,7 @@
     "greeting": "Olá, sou",
     "hire": "Disponível para trabalho",
     "abouttitle": "Sobre mim",
-<<<<<<< HEAD
     "about": "Bacharel e Licenciado em Ciências Biológicas pela Universidade de São Paulo e com especialização MBA em Data Science & Analytics. Tenho anos de experiência trabalhando como professor de ciências e técnico de laboratório de geologia e paleontologia, onde desenvolvi meu primeiro projeto na construção de um portal didático com WordPress, onde tive contato com Web Design, SEO e Google Analytics, onde meu interesse por Desenvolvimento despertou e onde tenho focado meus estudos e projetos. \nNo momento busco migrar de carreira para a área de desenvolvimento front-end, tenho estudado e feito projetos com HTML, CSS, JavaScript, TypeScript, ReactJS, NextJs, Git, GitHub e SQL.",
-=======
-    "about": "Olá! Sou Bruno!\n\n Sou formado em Ciências Biológicas pela Universidade de São Paulo, onde obtive meu bacharelado e licenciatura. Também concluí uma especialização MBA em Data Science & Analytics.\n\nRecentemente, decidi fazer uma transição de carreira para a área de desenvolvimento front-end, combinando minha paixão por resolver problemas com habilidades técnicas em tecnologias como HTML, CSS, JavaScript, TypeScript, ReactJS e NextJs. Também tenho experiência com ferramentas essenciais de desenvolvimento, como Git, GitHub e SQL, e busco constantemente aprimorar minhas habilidades por meio de projetos e estudos contínuos.\n\nMinha motivação para essa transição é o desejo de combinar o pensamento analítico adquirido nas ciências com a criatividade e inovação presentes no desenvolvimento web. Acredito que minha capacidade de analisar dados complexos e traduzi-los em soluções práticas será um diferencial na construção de interfaces funcionais e dinâmicas.",
->>>>>>> ce5341d6eeb4cf948372f3b4e855568702f923c4
     "education": {
       "title": "Educação",
       "degrees": "• Bacharelado e Licenciatura em Ciências Biológicas - Universidade de São Paulo\n\n• MBA em Ciência de Dados e Analytics"
