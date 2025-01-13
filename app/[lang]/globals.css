@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.light {
+  color: #333;
+  background: linear-gradient(-45deg, #fff, #faf0f9, #dfefff, #faf0f9, #fff);
+  background-size: 800% 800%;
+  animation: lateralflow 7s ease infinite;
+  height: 100vh;
+  transition-timing-function: cubic-belzier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  color: #e9e9e9;
+  background: linear-gradient(
+    -45deg,
+    #090909,
+    #10000f,
+    #040e19,
+    #10000f,
+    #090909
+  );
+  background-size: 800% 800%;
+  animation: lateralflow 7s ease infinite;
+  height: 100vh;
+  transition-timing-function: cubic-belzier(0.4, 0, 0.2, 1);
+}
+
+.fromLeft {
+  animation: lateralshow;
+  animation-timeline: view(75% 0%);
+  z-index: -10;
+}
+
+.fromRight {
+  animation: lateralshowright;
+  animation-timeline: view(75% 0%);
+  z-index: -10;
+}
+
+.fromBottom {
+  animation: bottomshow;
+  animation-timeline: view(75% 0%);
+  z-index: -20;
+}
+
+.title {
+  animation: appear 2000ms;
+}
+
+@keyframes lateralflow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes lateralshow {
+  from {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes lateralshowright {
+  from {
+    opacity: 0;
+    transform: translateX(200px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes bottomshow {
+  from {
+    opacity: 0;
+    transform: translatey(200px) scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0);
+  }
+}
