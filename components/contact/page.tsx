@@ -23,8 +23,14 @@ const Contact = ({ dict }: ContactProps) => {
   const [succesMessage, setSuccessMessage] = useState("");
 
   function onSubmit(data: FormData) {
+    const pipedreamUrl = process.env.PIPEDREAM_URL;
+    if (!pipedreamUrl) {
+      console.error("PIPEDREAM_URL is not defined");
+      return;
+    }
+
     axios
-      .post("https://eoq1xty6qrd4dri.m.pipedream.net", data)
+      .post(pipedreamUrl, data)
       .then((response) => {
         setSuccessMessage("Thanks for the message!");
       })
