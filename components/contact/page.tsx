@@ -44,6 +44,7 @@ const Contact = ({ dict }: ContactProps) => {
       </h2>
       <p className="fromLeft text-center">{dict.message.subtitle}</p>
       <form
+        id="contact-form"
         className="fromLeft p-8 flex flex-col mx-auto items-center"
         onSubmit={handleSubmit(onSubmit)}
       >

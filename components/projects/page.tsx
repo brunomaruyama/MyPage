@@ -24,8 +24,8 @@ export default function Projects({ dict }: ProjectsProps) {
                 alt={`screenshot of ${projeto.project}`}
                 width={400}
                 height={220}
-                style={{ objectFit: "contain" }}
-                className="w-full object-cover mx-auto  group-hover:scale-110 duration-500"
+                style={{ objectFit: "cover" }}
+                className="w-full h-1/2 mx-auto  group-hover:scale-110 duration-500"
               />
               <div className="p-4 text-white">
                 <h3 className="text-lg font-semibold mb-1">
