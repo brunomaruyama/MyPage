@@ -30,4 +30,13 @@ export const projetos: ProjetosProps[] = [
     slug: "portfolio",
     link: "https://brunomaruyama.vercel.app",
   },
+  {
+    project: "Products Catalog",
+    imageRef: ["/bemquetefizScr.png", "/bemquetefizScr2.png"],
+    techsUsed: ["Netx.JS ", "React ", "TypeScript ", "TailwindCSS ", "Vercel "],
+    description:
+      "This project was built using Next.JS, React, TypeScript and TailwindCSS. It is hosted on Vercel.\nIt is a catalog of handmade cosmetics products where I applied my knowledge in web design, UX/UI, web development, responsivity, project structuring, Next.JS, TailwindCSS and deployment.",
+    slug: "catalog",
+    link: "https://bemquetefiz.vercel.app",
+  },
 ];
