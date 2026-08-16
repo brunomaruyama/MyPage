@@ -6,8 +6,14 @@ interface HeaderProps {
 
 export default function Header({ dict }: HeaderProps) {
   return (
-    <header className="z-[999] min-h-[7vh] backdrop-blur-sm top-0 w-full flex items-center justify-center p-3 sm:px-[5vw] lg:px-[10vw]">
-      <div className="my-auto">
+    <header className="sticky top-0 z-50 w-full glass-nav transition-all duration-300">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-8 py-3.5">
+        <a
+          href="#home"
+          className="text-lg sm:text-xl font-bold tracking-tight text-gradient-cyan hover:opacity-80 transition-opacity"
+        >
+          Bruno Maruyama
+        </a>
         <MenuBtn dict={dict} />
       </div>
     </header>

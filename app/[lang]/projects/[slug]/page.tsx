@@ -5,12 +5,23 @@ import ThemeButton from "../../../../components/themebutton/page";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return projetos.map((projeto) => ({
-    slug: "projects/" + projeto.slug,
-  }));
+  const languages = ["pt", "en"];
+  const params: { lang: string; slug: string }[] = [];
+
+  for (const lang of languages) {
+    for (const projeto of projetos) {
+      params.push({ lang, slug: projeto.slug });
+    }
+  }
+
+  return params;
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+export default function ProjectPage({
+  params,
+}: {
+  params: { lang: string; slug: string };
+}) {
   const projeto = projetos.find((p) => p.slug === params.slug);
 
   if (!projeto) {
@@ -18,43 +29,115 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <>
-      <header className="h-[7vh] fixed backdrop-blur-md top-0 w-full flex items-center space-x-2 justify-between p-3 sm:px-[5vw] lg:px-[10vw]">
-        <Link
-          href="/"
-          className="hover:text-purple-400  duration-500 hover:translate-y-1 text-xl font-bold"
-        >
-          Home
-        </Link>
-        <ThemeButton />
-      </header>
-      <div className="pt-[13vh] flex-col space-y-4 h-full bg-transparent">
-        <h1 className="text-center text-3xl font-bold">{projeto.project}</h1>
-        {projeto.imageRef.map((image) => (
-          <div key={image} className="w-full object-cover mx-auto flex-col">
-            <Image
-              src={image}
-              alt={`screenshot of ${projeto.project}`}
-              width={1200}
-              height={800}
-              style={{ objectFit: "contain" }}
-              className="mx-auto"
-            />
-          </div>
-        ))}
-
-        <div className="sm:px-[5vw] lg:px-[10vw] px-3 max-w-[60vw] flex-col mx-auto">
-          <p className="mb-4">{projeto.description}</p>
-          <p className="mb-4">
-            Techs I used in this project: {projeto.techsUsed.join(", ")}
-          </p>
-          <a href={projeto.link} target="_blank">
-            <button className="mb-[10vh] text-white rounded-xl bg-purple-500 hover:bg-purple-600 duration-300 p-3">
-              Visit this project
-            </button>
-          </a>
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <header className="sticky top-0 z-50 w-full glass-nav transition-all duration-300">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-8 py-3.5">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-bold text-slate-800 hover:text-cyan-700 dark:text-slate-300 dark:hover:text-cyan-400 transition-colors"
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            <span>Voltar / Home</span>
+          </Link>
+          <ThemeButton />
         </div>
-      </div>
-    </>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-5xl mx-auto px-4 sm:px-8 py-12 flex-grow space-y-10">
+        <div className="text-center space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-100/80 text-cyan-800 border border-cyan-300 dark:bg-cyan-500/10 dark:text-cyan-400 dark:border-cyan-500/20">
+            Projeto
+          </div>
+          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 dark:text-white">
+            {projeto.project}
+          </h1>
+        </div>
+
+        {/* Project Screenshots */}
+        <div className="space-y-8">
+          {projeto.imageRef.map((image, idx) => (
+            <div
+              key={image}
+              className="glass-card rounded-2xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src={image}
+                alt={`Screenshot ${idx + 1} of ${projeto.project}`}
+                width={1200}
+                height={750}
+                quality={90}
+                priority={idx === 0}
+                style={{ width: "100%", height: "auto" }}
+                className="rounded-2xl"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Project Info Card */}
+        <div className="glass-card p-8 rounded-2xl space-y-6">
+          <div>
+            <h2 className="text-xl font-bold mb-2 text-slate-950 dark:text-white">Sobre o Projeto</h2>
+            <p className="text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line text-sm sm:text-base font-normal">
+              {projeto.description}
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-bold mb-3 text-slate-950 dark:text-white">Tecnologias Utilizadas</h2>
+            <div className="flex flex-wrap gap-2">
+              {projeto.techsUsed.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-800 border border-cyan-200 dark:bg-cyan-500/10 dark:text-cyan-400 dark:border-cyan-500/20"
+                >
+                  {tech.trim()}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {projeto.link && (
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800/60">
+              <a
+                href={projeto.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold tracking-wide text-white bg-[#06b6d4] hover:bg-[#0891b2] shadow-[0_4px_16px_rgba(6,182,212,0.35)] hover:shadow-[0_6px_24px_rgba(6,182,212,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+              >
+                <span>Acessar Projeto</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          )}
+        </div>
+      </main>
+    </div>
   );
 }

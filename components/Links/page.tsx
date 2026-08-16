@@ -3,20 +3,20 @@ import ThemeButton from "../themebutton/page";
 
 export default function Links() {
   return (
-    <ul className="hidden sm:flex  text-xl font-normal tracking-widest justify-center items-center space-x-10">
-      <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
+    <ul className="hidden sm:flex text-sm font-medium tracking-wide justify-center items-center space-x-8">
+      <li className="hover:text-cyan-400 transition-colors duration-200">
         <Link href="#about">About</Link>
       </li>
-      <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
+      <li className="hover:text-cyan-400 transition-colors duration-200">
         <Link href="#techs">Technologies</Link>
       </li>
-      <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
+      <li className="hover:text-cyan-400 transition-colors duration-200">
         <Link href="#projects">Projects</Link>
       </li>
-      <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
+      <li className="hover:text-cyan-400 transition-colors duration-200">
         <Link href="#contact">Contact</Link>
       </li>
-      <li className="translate-y-1">
+      <li>
         <ThemeButton />
       </li>
     </ul>

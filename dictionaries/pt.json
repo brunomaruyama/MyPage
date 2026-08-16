@@ -1,37 +1,51 @@
 {
   "me": {
-    "jobtitle": "Desenvolvedor Front-End",
+    "jobtitle": "Desenvolvedor Full Stack",
     "greeting": "Olá, sou",
     "hire": "Disponível para trabalho",
     "abouttitle": "Sobre mim",
-    "about": "Bacharelado e Licenciatura em Ciências Biológicas pela Universidade de São Paulo e com especialização MBA em Data Science & Analytics. Tenho anos de experiência trabalhando como professor de ciências e técnico de laboratório de geologia e paleontologia, onde desenvolvi meu primeiro projeto na construção de um portal didático com WordPress, onde tive contato com Web Design, SEO e Google Analytics, onde meu interesse por Desenvolvimento despertou e onde tenho focado meus estudos e projetos. \nNo momento busco migrar de carreira para a área de desenvolvimento front-end, tenho estudado e feito projetos com HTML, CSS, JavaScript, TypeScript, ReactJS, NextJs, Git, GitHub e SQL.",
+    "about": "Cursando Análise e Desenvolvimento de Sistemas, sou também Bacharel e Licenciado em Ciências Biológicas pela Universidade de São Paulo (USP), com MBA em Data Science & Analytics. Minha trajetória multidisciplinar combina experiência em educação, pesquisa científica e desenvolvimento de software, proporcionando uma abordagem analítica, orientada à resolução de problemas e à entrega de soluções de alto impacto.\n\nAtuei como professor de Ciências e técnico de laboratório de Geologia e Paleontologia, período em que desenvolvi meu primeiro projeto de software: o portal didático do Instituto de Geociências da USP, que atualmente atende mais de 20 mil usuários mensais e registra mais de 2 milhões de impressões por mês, consolidando experiência prática no desenvolvimento de aplicações voltadas à educação e divulgação científica.\n\nAtualmente, meu foco está no desenvolvimento de aplicações web e mobile utilizando React, React Native, Next.js, NestJS, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, SQL, Git, GitHub e Jest. Tenho aprofundado meus estudos e projetos em Spec-Driven Development (SDD), utilizando especificações como base para o planejamento, implementação e validação de funcionalidades, com o objetivo de produzir software mais consistente, testável e alinhado aos requisitos de negócio.\n\nBusco oportunidades como Desenvolvedor Full Stack, contribuindo com desenvolvimento de software, boas práticas de engenharia, testes automatizados, arquitetura de aplicações e aprendizado contínuo.",
     "education": {
-      "title": "Educação",
-      "degrees": "• Bacharelado e Licenciatura em Ciências Biológicas - Universidade de São Paulo\n\n• MBA em Ciência de Dados e Analytics"
+      "title": "Formação Acadêmica",
+      "degrees": "• Análise e Desenvolvimento de Sistemas\n\n• Bacharelado e Licenciatura em Ciências Biológicas - Universidade de São Paulo (USP)\n\n• MBA em Data Science & Analytics"
     },
     "languages": {
       "title": "Idiomas",
-      "lang": "• Português brasileiro: nativo\n\n• Inglês: avançado"
+      "lang": "• Português: nativo\n\n• Inglês: avançado"
+    },
+    "highlights": {
+      "users": "+20k usuários/mês",
+      "users_desc": "Portal Didático IGc-USP",
+      "impressions": "+2M impressões/mês",
+      "impressions_desc": "Divulgação científica",
+      "focus": "Full Stack & SDD",
+      "focus_desc": "Qualidade & Especificação"
     }
   },
   "tech": {
-    "title": "Tecnologias que tenho utilizado em meus projetos"
+    "title": "Tecnologias & Ferramentas",
+    "subtitle": "Stack tecnológica utilizada no desenvolvimento de soluções completas"
   },
   "projects": {
-    "title": "Projetos"
+    "title": "Projetos em Destaque",
+    "subtitle": "Conheça alguns dos meus trabalhos e projetos recentes",
+    "view": "Ver projeto",
+    "visit": "Acessar projeto"
   },
   "message": {
-    "title": "Envie-me uma Mensagem",
-    "subtitle": "Vamos trabalhar juntos!",
+    "title": "Entre em Contato",
+    "subtitle": "Tem um projeto em mente ou deseja trocar uma ideia? Vamos conversar!",
     "name": "Nome Completo",
     "mail": "Endereço de E-mail",
-    "mailplace": "exemplo@exemplo.com",
-    "message": "Mensagem",
-    "messageplace": "Digite sua mensagem",
-    "send": "Enviar",
-    "sending": "Enviando..."
+    "mailplace": "seu.email@exemplo.com",
+    "message": "Sua Mensagem",
+    "messageplace": "Escreva sua mensagem aqui...",
+    "send": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso! Entrarei em contato em breve."
   },
   "links": {
+    "home": "Início",
     "about": "Sobre",
     "tech": "Tecnologias",
     "projects": "Projetos",

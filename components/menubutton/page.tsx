@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import ThemeButton from "../themebutton/page";
@@ -11,54 +12,65 @@ interface MenuBtnProps {
 export default function MenuBtn({ dict }: MenuBtnProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { href: "#about", label: dict.links.about },
+    { href: "#techs", label: dict.links.tech },
+    { href: "#projects", label: dict.links.projects },
+    { href: "#contact", label: dict.links.contact },
+  ];
+
   return (
-    <div className="grid place-items-center">
+    <div className="flex items-center">
+      {/* Mobile toggle button */}
       <button
-        className="sm:hidden space-y-2 justify-center h-10 w-10 bg-purple-500/80 rounded-full p-2 shadow-[0_0_10px_rgb(168,85,247,0.7)]"
+        aria-label="Toggle menu"
+        className="sm:hidden flex flex-col justify-center items-center h-10 w-10 bg-cyan-50 text-cyan-800 border border-cyan-300 dark:bg-cyan-500/20 dark:text-cyan-400 dark:border-cyan-500/30 rounded-lg p-2 transition-colors hover:bg-cyan-100 dark:hover:bg-cyan-500/30"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <div
-          className={`bg-slate-200 h-[1px] w-5 rounded-full transition-all duration-300 mx-auto ${
-            isOpen ? "rotate-[135deg]  translate-y-1" : ""
+          className={`bg-current h-0.5 w-5 rounded-full transition-all duration-300 ${
+            isOpen ? "rotate-45 translate-y-1.5" : "mb-1"
           }`}
-        ></div>
+        />
         <div
-          className={`bg-slate-200   h-[1px] w-5 rounded-full transition-all duration-300 mx-auto ${
-            isOpen ? "hidden translate-x-2" : ""
+          className={`bg-current h-0.5 w-5 rounded-full transition-all duration-300 ${
+            isOpen ? "opacity-0 scale-x-0" : "mb-1"
           }`}
-        ></div>
+        />
         <div
-          className={`bg-slate-200  h-[1px] w-5 rounded-full transition-all duration-300 mx-auto ${
-            isOpen ? "rotate-[-135deg]  -translate-y-1" : ""
+          className={`bg-current h-0.5 w-5 rounded-full transition-all duration-300 ${
+            isOpen ? "-rotate-45 -translate-y-1.5" : ""
           }`}
-        ></div>
+        />
       </button>
-      <ul
+
+      {/* Navigation menu */}
+      <div
         className={`${
           isOpen
-            ? "translate-y-0 scale-y-100 opacity-100 block"
-            : "-translate-y-1/2 scale-y-0 opacity-0 h-0"
-        } sm:translate-y-0 sm:scale-y-100 sm:opacity-100 duration-1000 transition-all  sm:flex w-full text-xl font-normal tracking-widest justify-center items-center sm:space-x-10 space-x-0 text-center`}
+            ? "absolute top-full left-0 right-0 glass-card p-6 flex flex-col space-y-4 border-t border-cyan-500/20 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-300"
+            : "hidden"
+        } sm:static sm:flex sm:flex-row sm:items-center sm:space-y-0 sm:space-x-8 sm:bg-transparent sm:border-0 sm:p-0 sm:shadow-none`}
       >
-        <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
-          <Link href="#about">{dict.links.about}</Link>
-        </li>
-        <li className="hover:text-purple-400  duration-500 hover:translate-y-1">
-          <Link href="#techs">{dict.links.tech}</Link>
-        </li>
-        <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
-          <Link href="#projects">{dict.links.projects}</Link>
-        </li>
-        <li className="hover:text-purple-400 duration-500 hover:translate-y-1">
-          <Link href="#contact">{dict.links.contact}</Link>
-        </li>
-        <li className="translate-y-1">
+        <ul className="flex flex-col sm:flex-row items-center gap-5 sm:gap-7 text-sm font-semibold tracking-wide">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-slate-700 hover:text-cyan-700 dark:text-slate-300 dark:hover:text-cyan-400 transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex items-center justify-center gap-3 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-200 dark:border-slate-700/50 sm:pl-4 sm:border-l">
           <ThemeButton />
-        </li>
-        <li className="translate-y-1">
           <LangSwitcher />
-        </li>
-      </ul>{" "}
+        </div>
+      </div>
     </div>
   );
 }

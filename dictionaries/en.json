@@ -1,39 +1,53 @@
 {
   "me": {
-    "jobtitle": "Front-End Developer",
+    "jobtitle": "Full Stack Developer",
     "greeting": "Hi, I'm",
-    "hire": "Avaiable for work",
+    "hire": "Available for work",
     "abouttitle": "About me",
-    "about": "Bachelor's and Licentiate's degrees in Biological Sciences from the University of São Paulo and an MBA specialization in Data Science & Analytics. I have years of experience working as a science teacher and lab technician in a Geology and Paleontology Laboratory, where I developed my first project in the construction of an educational portal with WordPress, where I had contact with Web Design, SEO, and Google Analytics, where my interest in Development was awakened and where I have focused my studies and projects. \nI am currently looking to migrate my career to ​front-end development. I have studied and worked on projects using HTML, CSS, JavaScript, TypeScript, ReactJS, NextJs, Git, GitHub, and SQL.",
+    "about": "Currently studying Systems Analysis and Development, I also hold a Bachelor's and Licentiate degree in Biological Sciences from the University of São Paulo (USP), with an MBA in Data Science & Analytics. My multidisciplinary trajectory combines experience in education, scientific research, and software development, providing an analytical approach focused on problem-solving and delivering high-impact solutions.\n\nI worked as a Science teacher and laboratory technician in Geology and Paleontology, a period during which I developed my first software project: the educational portal for the Institute of Geosciences at USP, which currently serves over 20,000 monthly users and records more than 2 million impressions per month, consolidating practical experience in developing applications for education and science communication.\n\nCurrently, my focus is on web and mobile application development using React, React Native, Next.js, NestJS, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, SQL, Git, GitHub, and Jest. I have been deepening my studies and projects in Spec-Driven Development (SDD), using specifications as the foundation for planning, implementing, and validating features, aiming to build more consistent, testable software aligned with business requirements.\n\nI am seeking opportunities as a Full Stack Developer, contributing with software development, engineering best practices, automated testing, application architecture, and continuous learning.",
     "education": {
-      "title": "Education",
-      "degrees": "• Bachelor´s and Licentiate Degree in Biological Sciences - Universidade de São Paulo\n\n• MBA Specialization Degree in Data Science and Analytics"
+      "title": "Academic Background",
+      "degrees": "• Systems Analysis and Development\n\n• Bachelor's and Licentiate's Degree in Biological Sciences - University of São Paulo (USP)\n\n• MBA in Data Science & Analytics"
     },
     "languages": {
       "title": "Languages",
-      "lang": "• Brazilian portuguese: native speaker\n\n• English: advanced"
+      "lang": "• Portuguese: native\n\n• English: advanced"
+    },
+    "highlights": {
+      "users": "+20k monthly users",
+      "users_desc": "IGc-USP Educational Portal",
+      "impressions": "+2M monthly impressions",
+      "impressions_desc": "Scientific communication",
+      "focus": "Full Stack & SDD",
+      "focus_desc": "Quality & Specification"
     }
   },
   "tech": {
-    "title": "Technologies I've been using in my projects"
+    "title": "Technologies & Tools",
+    "subtitle": "Tech stack used to build high-quality, end-to-end applications"
   },
   "projects": {
-    "title": "Projects"
+    "title": "Featured Projects",
+    "subtitle": "Explore some of my recent work and side projects",
+    "view": "View project",
+    "visit": "Visit project"
   },
   "message": {
-    "title": "Send me a Message",
-    "subtitle": "Let's work together!",
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind or want to connect? Let's talk!",
     "name": "Full Name",
-    "mail": "E-mail Address",
-    "mailplace": "example@example.com",
-    "message": "Message",
-    "messageplace": "Type your message",
-    "send": "Send",
-    "sending": "Sending..."
+    "mail": "Email Address",
+    "mailplace": "your.email@example.com",
+    "message": "Your Message",
+    "messageplace": "Write your message here...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Thank you for your message! I'll get back to you soon."
   },
   "links": {
+    "home": "Home",
     "about": "About",
-    "tech": "Techs",
+    "tech": "Technologies",
     "projects": "Projects",
     "contact": "Contact"
   }

@@ -1,32 +1,53 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export const HomeButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 400) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
-    <a
-      href="#"
-      className="bottom-[10%] right-[5%] fixed rounded-full p-3 bg-purple-500 hover:bg-purple-600 hover:-translate-y-1 duration-300 text-white"
+    <button
+      aria-label="Voltar ao topo"
+      onClick={scrollToTop}
+      className="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-[#06b6d4] hover:bg-[#0891b2] text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.65)] hover:-translate-y-1 active:translate-y-0 transition-all duration-300 animate-in fade-in zoom-in-75"
     >
       <svg
-        fill="#fff"
-        height="16px"
-        width="16px"
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 330 330"
+        className="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          {" "}
-          <path
-            id="XMLID_224_"
-            d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"
-          ></path>{" "}
-        </g>
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2.5}
+          d="M5 15l7-7 7 7"
+        />
       </svg>
-    </a>
+    </button>
   );
 };
